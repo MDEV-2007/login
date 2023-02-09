@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+    <h1>This is block content</h1>
+   
+<div class="container">
+  <ul class="menu">
+    <li class="item">
+      <i class="fas fa-eye"></i>
+      <span>Preview</span>
+    </li>
+    <li class="item share">
+      <div class="share">
+        <i class="fas fa-share"></i>
+        <span>Share</span>
+      </div>
+      <i class="fa-solid fa-chevron-right"></i>
+      <ul class="share-menu">
+        <li class="item">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+        </li>
+        <li class="item">
+          <i class="fab fa-twitter"></i>
+          <span>Twitter</span>
+        </li>
+        <li class="item">
+          <i class="fab fa-telegram"></i>
+          <span>Telegram</span>
+        </li>
+      </ul>
+    </li>
+    <li class="item">
+      <i class="fas fa-copy"></i>
+      <span>Copy</span>
+    </li>
+    <li class="item">
+      <i class="fas fa-edit"></i>
+      <span>Edit</span>
+    </li>
+    <li class="item">
+      <i class="fas fa-trash"></i>
+      <span>Delete</span>
+    </li>
+    <div class="setting">
+      <li class="item">
+        <i class="fa-solid fa-gear"></i>
+        <span>Setting</span>
+      </li>
+    </div>
+  </ul>
+</div>
+{% endblock %}

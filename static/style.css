@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+form{
+    margin-top: 80px;
+}
+
+
+form span{
+    display: none;
+}
+
+form ul{
+    display: none;
+}
+
+#auth{
+    margin-top: 15px;
+}
+.controls input{
+    margin-top: 20px;
+    border-radius: 10px;
+    border: solid red;
+    outline: none;
+    width: 400px;
+    padding-left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.control-label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+.forms{
+    display: flex;
+    justify-content: space-between;
+}
+.forms img{
+    width: 500px;
+}
+.login-title{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}

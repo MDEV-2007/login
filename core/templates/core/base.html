@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Write with me</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a href="{% url 'frontpage' %}" class="navbar-brand">Code Write with me </a>
+        
+         <div class="signup">
+            {% csrf_token %}
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'accounts' %}">Your Accounts</a> | 
+                <a class="btn btn-success" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+                <a class="btn btn-primary" href="{% url 'signup' %}" role="button">Signup</a>
+                <a  href="{% url 'login' %}" role="button">Login</a>
+            {% endif %}
+         </div>
+      </nav>
+      <div class="container">
+        {% block content %}
+        {% endblock %}
+      </div>
+      <script src="{% static 'main.js' %}"></script>
+    <script src="https://kit.fontawesome.com/28157a8fdb.js" crossorigin="anonymous"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
